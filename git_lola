@@ -1,0 +1,2 @@
+git config --global alias.lol "log --graph --pretty='format:%C(auto)%h %d %s %C(green)(%ad) %C(cyan)<%an>' --abbrev-commit --date=relative"
+git config --global alias.lola "log --graph --pretty='format:%C(auto)%h %d %s %C(green)(%ad) %C(cyan)<%an>' --abbrev-commit --all --date=relative"
