@@ -1,0 +1,8 @@
+conda create --name=python3.10 -c conda-forge -y python=3.10.9
+
+conda install -c conda-forge numpy=1.23.5 pandas=1.5.1 lightgbm=3.3.5 scikit-learn=1.2.1 xgboost=1.7.1 h3-py=3.7.6 dill=0.3.6 joblib=1.2.0 catboost=1.1.1 feature_engine=1.6.0
+
+conda install -c conda-forge -y optuna=3.1.0
+
+conda install -c conda-forge -y tabulate s3fs pyathena pyarrow openpyxl xlsxwriter jinja2 awswrangler matplotlib seaborn pylint flake8 mypy plotly streamlit docker-py fire python-kaleido unidecode smart-open pygraphviz nbformat networkx
+
