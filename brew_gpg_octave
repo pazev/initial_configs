@@ -1,0 +1,15 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install gnupg
+
+# GPG
+git config --global --unset gpg.format
+gpg --list-secret-keys --keyid-format=long
+
+git config --global user.signingkey KEY
+git config --global commit.gpgsign true
+
+gpg --armor --export
+
+# Octave
+brew install octave-gui
