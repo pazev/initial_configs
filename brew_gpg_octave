@@ -6,11 +6,16 @@ brew install pinentry-mac
 # GPG
 git config --global --unset gpg.format
 gpg --list-secret-keys --keyid-format=long
+echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
+
+
+gpg --full-generate-key
+gpg --list-secret-keys --keyid-format=long
+
+gpg --armor --export KEY
 
 git config --global user.signingkey KEY
 git config --global commit.gpgsign true
-
-gpg --armor --export
 
 echo "pinentry-program $(which pinentry-mac)" >> ~/.gnupg/gpg-agent.conf
 killall gpg-agent
